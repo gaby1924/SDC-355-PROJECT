@@ -1,1 +1,64 @@
+<!--Gabriela Kaul-->
+<!--09/08/2026-->
+<!--Week 1 Homepage Build-->
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<!---- SETTING METADATA ABOUT THE DOC ---->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my first personal website created as part of a web development course.">
+    <meta name="keywords" content="HTML, CSS, web development, personal website">
+    <meta name="author" content="Gabriela Kaul">
+    <link rel="stylesheet" href="styles.css"> <!-- CSS FILE LINK -->
+    <title>Gabriela Kaul</title>
+</head>
+<body>
+    <header>
+        <!----- NAVIGATION MENU ----->
+        <nav> 
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
+        <!---- DYNAMIC WELCOME MSG: JAVASCRIPT --->
+        <h2 id="welcomeMessage"></h2>
+    </header>
+    <!--------- MAIN CONTENT PAGE --------->    
+    <main>
+        <!---------- HERO SECTION ------------->
+        <section class="hero">
+        <!--------- HEADER 1: "WELCOME" TITLE ---------->
+            <h1>WELCOME</h1>
+            <div class="home">
+                <p>
+                    I'm Gabriela Kaul, full-time student, full-time boy-mom, part-time coffee addict. Keep your peepers peeled for more projects and updates to the website as I continue developing my design and development skills at ECPI!
+                    <div class="hero-headshot">
+                        <img src="headshot.png" alt="Me" />
+                    </div>
+                </p>
+            </div>
+        </section>
+    </main>
+        <!---- FOOTER ----->
+    <footer>
+        &copy; 2026 Gabriela Kaul
+    </footer>
+    <script>
+        //prompt the user for their name
+        const userName = prompt("Hi there! What's your name?");
+        //select the welcome message element
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        //update the welcome message dynamically
+        if (userName && userName.trim() !== "") {
+            alert('Welcome to my website, ' + userName + '!');
+        } else {
+            alert('Welcome to my website, guest!');
+        }
+    </script>
+</body>
+</html>
