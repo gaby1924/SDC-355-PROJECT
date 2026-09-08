@@ -1,0 +1,72 @@
+<!--Gabriela Kaul-->
+<!--09/08/26-->
+<!--Week 1 Homepage Build-->
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<!---- SETTING METADATA ABOUT THE DOC ---->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my first personal website created as part of a web development course.">
+    <meta name="keywords" content="HTML, CSS, web development, personal website">
+    <meta name="author" content="Gabriela Kaul">
+    <link rel="stylesheet" href="styles.css"> <!-- CSS FILE LINK -->
+    <title>Gabriela Kaul</title>
+</head>
+<body>
+    <header>
+<!-------- NAVIGATION MENU ------------->
+        <nav> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+<!---------- CONTACT SECTION ------------>
+        <section id="contact">
+<!--- HEADER 1: "CONTACT" TITLE --->
+            <h1>Contact Me</h1>
+<!-- CONTACT FORM -->
+             <form id="contactForm">
+                <div class="form-row">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <input type="submit" value="Send Message">
+                </div>
+            </form>
+<!-------- HOVER LINKS FOR CONTACT INFO -------->
+            <ul>
+                <li><a href="mailto:gkaul13@gmail.com">My Email</a></li>
+                <li><a href="tel:7579686013">My Cell</a></li>
+                <li><a href="https://www.linkedin.com/in/gabriela-malaka-104401414/">My LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+    <!---- FOOTER ----->
+    <footer>
+        &copy; 2026 Gabriela Kaul
+    </footer>
+</body>
+</html>
