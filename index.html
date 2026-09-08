@@ -57,9 +57,9 @@
         const welcomeMessage = document.getElementById("welcomeMessage");
         //update the welcome message dynamically
         if (userName && userName.trim() !== "") {
-            welcomeMessage.textContent = 'Welcome to my website, ${userName}!';
+            alert('Welcome to my website, ' + userName + '!');
         } else {
-            welcomeMessage.textContent = 'Welcome to my website, guest!';
+            alert('Welcome to my website, guest!');
         }
     </script>
 </body>
