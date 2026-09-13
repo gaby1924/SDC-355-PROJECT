@@ -1,5 +1,6 @@
 <!--Gabriela Kaul-->
 <!--09/08/26-->
+<!--LAST UPDATED: 9/13/26-->
 <!--Week 1 Homepage Build-->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,8 @@
     <meta name="description" content="This is my first personal website created as part of a web development course.">
     <meta name="keywords" content="HTML, CSS, web development, personal website">
     <meta name="author" content="Gabriela Kaul">
-    <link rel="stylesheet" href="styles.css"> <!-- CSS FILE LINK -->
+<!------ CSS FILE LINK ------>
+    <link rel="stylesheet" href="styles.css">
     <title>Gabriela Kaul</title>
 </head>
 <body>
@@ -18,8 +20,14 @@
 <!-------- NAVIGATION MENU ------------->
         <nav> 
             <ul>
+                <!--TOGGLE SWITCH FOR DARK MODE-->
+                <li id="darkModeToggleContainer">
+                    <input type="checkbox" id="darkModeToggle" value="Dark Mode"/>
+                    <label for="darkModeToggle">Dark Mode</label>
+                </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
+                <li><a href="featuredContent.html">Featured Content</a></li>
                 <li><a href="projects.html">My Projects</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
@@ -29,31 +37,39 @@
 <!---------- CONTACT SECTION ------------>
         <section id="contact">
 <!--- HEADER 1: "CONTACT" TITLE --->
-            <h1>Contact Me</h1>
+            <h1>CONTACT ME</h1>
 <!-- CONTACT FORM -->
              <form id="contactForm">
                 <div class="form-row">
+                    <!-- NAME FIELD -->
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-
+                <!-- EMAIL FIELD -->
                 <div class="form-row">
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
-                <div class="form-row">
+                <!-- SUBJECT FIELD -->
+                <div class="form-row">    
                     <label for="subject">Subject:</label>
                     <input type="text" id="subject" name="subject">
                 </div>
-
+                <!-- MESSAGE FIELD -->
                 <div class="form-row">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5"></textarea>
                 </div>
-
+                <!-- SUBMIT BUTTON -->
+                 <!-- ADD INTERACTIVITY WITH JAVASCRIPT -->
                 <div class="form-row">
                     <input type="submit" value="Send Message">
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                            alert("Thank you, your message has been sent!");
+                        });
+                    </script>
                 </div>
             </form>
 <!-------- HOVER LINKS FOR CONTACT INFO -------->
