@@ -1,5 +1,6 @@
 <!--Gabriela Kaul-->
-<!--09/08/2026-->
+<!--09/08/26-->
+<!--LAST UPDATED: 9/13/26-->
 <!--Week 1 Homepage Build-->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,8 @@
     <meta name="description" content="This is my first personal website created as part of a web development course.">
     <meta name="keywords" content="HTML, CSS, web development, personal website">
     <meta name="author" content="Gabriela Kaul">
-    <link rel="stylesheet" href="styles.css"> <!-- CSS FILE LINK -->
+<!------ CSS FILE LINK ------>
+    <link rel="stylesheet" href="styles.css">
     <title>Gabriela Kaul</title>
 </head>
 <body>
@@ -18,13 +20,18 @@
         <!----- NAVIGATION MENU ----->
         <nav> 
             <ul>
+                <!--TOGGLE SWITCH FOR DARK MODE-->
+                <li id="darkModeToggleContainer">
+                    <input type="checkbox" id="darkModeToggle" value="Dark Mode"/>
+                    <label for="darkModeToggle">Dark Mode</label>
+                </li>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
+                <li><a href="featuredContent.html">Featured Content</a></li>
                 <li><a href="projects.html">My Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
         <!---- DYNAMIC WELCOME MSG: JAVASCRIPT --->
         <h2 id="welcomeMessage"></h2>
     </header>
@@ -38,10 +45,26 @@
                 <p>
                     I'm Gabriela Kaul, full-time student, full-time boy-mom, part-time coffee addict. Keep your peepers peeled for more projects and updates to the website as I continue developing my design and development skills at ECPI!
                     <div class="hero-headshot">
-                        <img src="headshot.png" alt="Me" />
+                        <a href="assets/headshot.png" target="_blank">
+                        <img src="assets/headshot.png" alt="Me" />
+                        </a>
                     </div>
                 </p>
             </div>
+        </section>
+        <!-- A FOR LOOP TO DISPLAY BULLET LIST of 5 SKILLS OF MINE -->
+        <section class="skills">
+            <h3>My Skills</h3>
+            <script>
+        const skills = ["HTML", "CSS", "React", "Next.js", "Node.js"];
+        const bulletList = document.createElement("ul");
+        for (let i = 0; i < skills.length; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = skills[i];
+            bulletList.appendChild(listItem);
+        }
+        document.querySelector(".skills").appendChild(bulletList);
+    </script>
         </section>
     </main>
         <!---- FOOTER ----->
@@ -55,6 +78,7 @@
         const welcomeMessage = document.getElementById("welcomeMessage");
         //update the welcome message dynamically
         if (userName && userName.trim() !== "") {
+            welcomeMessage.textContent = 'Welcome to my website, ' + userName + '!';
             alert('Welcome to my website, ' + userName + '!');
         } else {
             alert('Welcome to my website, guest!');
