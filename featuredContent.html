@@ -1,0 +1,85 @@
+<!--Name: Gaby Malaka-->
+<!--Date: 09/13/26-->
+<!--Description: Featured content pg-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my first personal website created as part of a web development course.">
+    <meta name="keywords" content="HTML, CSS, web development, personal website">
+    <meta name="author" content="Gabriela Kaul">
+<!----- CSS FILE LINK ------>
+    <link rel="stylesheet" href="styles.css">
+    <title>Gabriela Kaul</title>
+</head>
+<body>
+    <header>
+<!----- NAVIGATION MENU ----->
+        <nav>
+            <ul>
+                <!--TOGGLE SWITCH FOR DARK MODE-->
+                <li id="darkModeToggleContainer">
+                    <input type="checkbox" id="darkModeToggle" value="Dark Mode" />
+                    <label for="darkModeToggle">Dark Mode</label>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="featuredContent.html" class="active">Featured Content</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!----- FEATURED CONTENT SECTION ----->
+    <main>
+        <section class="featuredContent">
+            <h1>FEATURED CONTENT</h1>
+            <div class="UniversityResources">
+                <p>This is the featured content section for ECPI University.</p>
+                <div class="logo">
+                    <img src="ECPI_LOGO.png" alt="ECPI University logo with the ECPI wordmark and institutional branding, displayed on a clean background with a bold blue and white color scheme and a professional academic look.">
+                </div>
+                <div class="links">
+                    <a href="https://ecpi.libguides.com/LibraryHome" target="_blank">ECPI University Library</a>
+                    <a href="https://explore.ecpi.edu/programs/main/index.php?cmpid=PPCGGLBRD&SearchKeyword=ecpi%20university&AdGroup=ECPI%20University%20-%20HV&campaign=%5BS-Manassas%5D%20Brand%20-%20Exact&c=northern-virginia&mkwid=YAbz3plZ&device=c&pkw=ecpi%20university&pcrid=819851026496&pmt=e&slid=&s=google&k=ecpi%20university&utm_source=google&utm_medium=cpc&utm_campaign=%5BS-Manassas%5D+Brand+-+Exact&utm_term=ecpi%20university&utm_content=819851026496&gad_source=1&gad_campaignid=975591796&gbraid=0AAAAAD_iNn9_ux5xk_dRWCelK8F7i_smF&gclid=Cj0KCQjwk5nVBhDiARIsAHNGqadwIDragYoYWWRBQWsnHvWxTp0nFGr_Q-K145q2QhVqNIO9y3Ij7v8aAiqLEALw_wcB" target="_blank">ECPI University Programs</a>
+                </div>
+            </div>
+            <div class="PersonalProjects">
+                <p>This is the featured content section for my personal projects.</p>
+            </div>
+            <div class="projects">
+                <a href="assets/ThinkWorkWell.png" target="_blank">
+                    <img src="assets/ThinkWorkWell.png" alt="Think WorkWell services webpage showing a polished business website with navigation, service sections, and a welcoming professional tone on a light background, with the Think WorkWell brand and service information prominently displayed." />
+                </a>
+                <a href="assets/moody1.png" target="_blank">
+                    <img src="assets/moody1.png" alt="MOODY project homepage." />
+                </a>
+                <a href="assets/moody2.png" target="_blank">
+                    <img src="assets/moody2.png" alt="MOODY project interface." />
+                </a>
+                <a href="assets/moody3.png" target="_blank">
+                    <img src="assets/moody3.png" alt="MOODY project detail view." />
+                </a>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.onload = function() {
+            // count how many featured content items there are
+            const projectCount = document.querySelectorAll(".projects a").length;
+            const uniDiv = document.querySelector(".UniversityResources");
+            const personalProjectsDiv = document.querySelector(".PersonalProjects");
+            //begin if-else logic
+            personalProjectsDiv.style.display = "block"; //always shown
+            //if there are less than 3 projects, show university resources and personal projects
+            //otherwise hide university resources and show personal projects
+            if (projectCount < 3) {
+                uniDiv.style.display = "block";
+                } else {
+                    uniDiv.style.display = "none";
+                }
+            };
+    </script>
+</body>
+</html>
