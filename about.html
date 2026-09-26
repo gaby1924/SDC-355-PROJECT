@@ -1,6 +1,6 @@
 <!--Gabriela Kaul-->
-<!--03/08/26-->
-<!--LAST UPDATED: 3/28/26-->
+<!--09/08/26-->
+<!--LAST UPDATED: 9/13/26-->
 <!--Week 1 Homepage Build-->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,8 @@
     <meta name="description" content="This is my first personal website created as part of a web development course.">
     <meta name="keywords" content="HTML, CSS, web development, personal website">
     <meta name="author" content="Gabriela Kaul">
-    <link rel="stylesheet" href="styles.css"> <!-- CSS FILE LINK -->
+<!------ CSS FILE LINK ------>
+    <link rel="stylesheet" href="styles.css">
     <title>Gabriela Kaul</title>
 </head>
 <body>
@@ -19,8 +20,13 @@
     <!------ NAVIGATION MENU ------>
         <nav> 
             <ul>
+                <!--TOGGLE SWITCH FOR DARK MODE-->
+                <li id="darkModeButton">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+                </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="featuredContent.html">Featured Content</a></li>
                 <li><a href="projects.html">My Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -49,6 +55,7 @@
     <footer>
         &copy; 2026 Gabriela Kaul
     </footer>
+    <!-- JAVASCRIPT FILE LINK -->
+    <script src="scripts.js"></script>
 </body>
 </html>
-<!-- ADD ANOTHER SECTION ^ FOR LIKES/DISLIKES & ADD PHOTOS -->

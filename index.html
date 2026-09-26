@@ -1,7 +1,6 @@
 <!--Gabriela Kaul-->
-<!--03/08/26-->
-<!--LAST UPDATED: 3/28/26-->
-<!--Week 1 Homepage Build-->
+<!--09/08/26-->
+<!--LAST UPDATED: 9/13/26-->
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -11,7 +10,8 @@
     <meta name="description" content="This is my first personal website created as part of a web development course.">
     <meta name="keywords" content="HTML, CSS, web development, personal website">
     <meta name="author" content="Gabriela Kaul">
-    <link rel="stylesheet" href="styles.css"> <!-- CSS FILE LINK -->
+<!------ CSS FILE LINK ------>
+    <link rel="stylesheet" href="styles.css">
     <title>Gabriela Kaul</title>
 </head>
 <body>
@@ -19,19 +19,20 @@
         <!----- NAVIGATION MENU ----->
         <nav> 
             <ul>
+                <!--TOGGLE SWITCH FOR DARK MODE-->
+                <li id="darkModeButton">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">Dark Mode</button>
+                </li>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
+                <li><a href="featuredContent.html">Featured Content</a></li>
                 <li><a href="projects.html">My Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
-        <!---- DYNAMIC WELCOME MSG: JAVASCRIPT --->
-        <h2 id="welcomeMessage"></h2>
     </header>
     <!--------- MAIN CONTENT PAGE --------->    
     <main>
-
         <!---------- HERO SECTION ------------->
         <section class="hero">
         <!--------- HEADER 1: "WELCOME" TITLE ---------->
@@ -40,28 +41,27 @@
                 <p>
                     I'm Gabriela Kaul, full-time student, full-time boy-mom, part-time coffee addict. Keep your peepers peeled for more projects and updates to the website as I continue developing my design and development skills at ECPI!
                     <div class="hero-headshot">
-                        <img src="headshot.png" alt="Me" />
+                        <a href="assets/headshot.png" target="_blank">
+                        <img src="assets/headshot.png" alt="Me" />
+                        </a>
                     </div>
                 </p>
             </div>
         </section>
+        <!-- A FOR LOOP TO DISPLAY BULLET LIST OF 5 SKILLS OF MINE -->
+        <section class="skills">
+            <h3>My Skills</h3>
+            <ul>
+                <!-- LINK TO SKILLS LIST SCRIPT-->
+                 <li id="skillsList"></li>
+            </ul>
+        </section>
     </main>
-        <!---- FOOTER ----->
+    <!---- FOOTER ----->
     <footer>
         &copy; 2026 Gabriela Kaul
     </footer>
-    <script>
-        //prompt the user for their name
-        const userName = prompt("Hi there! What's your name?");
-        //select the welcome message element
-        const welcomeMessage = document.getElementById("welcomeMessage");
-        //update the welcome message dynamically
-        if (userName && userName.trim() !== "") {
-            welcomeMessage.textContent = 'Welcome to my website, ' + userName + '!';
-            alert('Welcome to my website, ' + userName + '!');
-        } else {
-            alert('Welcome to my website, guest!');
-        }
-    </script>
+    <!-- JAVASCRIPT FILE LINK -->
+    <script src="scripts.js"></script>
 </body>
 </html>
