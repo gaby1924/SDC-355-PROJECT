@@ -8,11 +8,9 @@ Welcome to my website. This was designed as a class project for an Intro to Web 
 * contact me page
 
 This website features my favorite colors, black and purple, and was designed using the following:
-* HTML 5
-* CSS 3
-* VS Code
-
-I intend to use JavaScript, React, and possibly more to the design/development of this website including developing a domain name upon the final product. 
+* HTML
+* CSS
+* JAVASCRIPT
 
 # HOMEPAGE SCREENSHOT
 <img width="1858" height="904" alt="image" src="https://github.com/user-attachments/assets/f108b63b-1ec7-477f-b5bb-4dd91ed86cb4" />
