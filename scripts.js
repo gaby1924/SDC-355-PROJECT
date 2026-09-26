@@ -23,7 +23,6 @@ toggleButton.addEventListener('click', () => {
 });
 
 //WELCOME MESSAGE NOTIFICATION SCRIPT
-if (window.location.href.includes("index.html")) {
 const userName = prompt("Hi there! What's your name?");
 //BUILD WELCOME MSG
 const welcomeMessage = userName && userName.trim() !== ""
