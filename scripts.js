@@ -24,14 +24,12 @@ toggleButton.addEventListener('click', () => {
 
 //PROMPT USER FOR THEIR NAME & ALERT WITH A WELCOME MESSAGE
 //STORE IN A VARIABLE & LOAD FOR INDEX PG ONLY
-if (window.location.pathname.endsWith("index.html")) {
     const userName = prompt("Hi there! What's your name?");
     if (userName && userName.trim() !== "") {
         alert('Welcome to my website, ' + userName + "!");
     } else {
         alert("Welcome to my website, guest!");
     }
-};
 
 //COUNT THE NUMBER OF PROJECTS & DYNAMICALLY SHOW/HIDESECTIONS BASED ON COUNT
 window.onload = function () {
@@ -57,3 +55,19 @@ skills.forEach(skill => {
     li.textContent = skill;
     skillsList.appendChild(li);
 });
+
+//ADD A TIMED CONFIRMATION FOR CONTACT FORM SUBMISSION
+const contactForm = document.querySelector("form.contact-form");
+const sendingMessage = document.getElementById("sendingMessage");
+const messageSent = document.getElementById("messageSent");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        sendingMessage.style.display = "block";
+        setTimeout(() => {
+            sendingMessage.style.display = "none";
+            messageSent.style.display = "block";
+        }, 2000); // 2-second delay
+    });
+}
