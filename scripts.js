@@ -22,15 +22,31 @@ toggleButton.addEventListener('click', () => {
     setTheme(newTheme);
 });
 
-//PROMPT USER FOR THEIR NAME & ALERT WITH A WELCOME MESSAGE
-//STORE IN A VARIABLE & LOAD FOR INDEX PG ONLY
-    const userName = prompt("Hi there! What's your name?");
-    if (userName && userName.trim() !== "") {
-        alert('Welcome to my website, ' + userName + "!");
-    } else {
-        alert("Welcome to my website, guest!");
-    }
-
+//WELCOME MESSAGE NOTIFICATION SCRIPT
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.href.includes("index.html")) {
+const userName = prompt("Hi there! What's your name?");
+//BUILD WELCOME MSG
+const welcomeMessage = userName && userName.trim() !== ""
+? 'Welcome to my website, ' + userName + '!'
+    : 'Welcome to my website, guest!';
+//DELAY BY 2 SECONDS
+setTimeout(function () {
+    //CREATE NOTIFICATION ELEMENT
+    const notification = document.createElement("div");
+    notification.textContent = welcomeMessage;
+    //STYLE
+    notification.style.backgroundColor = "purple";
+    notification.style.color = "white";
+    notification.style.padding = "15px";
+    notification.style.fontSize = "18px";
+    //APPEND TO TOP OF PAGE
+    const area = document.getElementById("welcome-message");
+    area.appendChild(notification);
+}, 2000); //2 SEC DELAY
+    } //END IF INDEX.HTML
+});
+    
 //COUNT THE NUMBER OF PROJECTS & DYNAMICALLY SHOW/HIDESECTIONS BASED ON COUNT
 window.onload = function () {
     const projectCount = document.querySelectorAll(".projects a").length;
@@ -60,7 +76,6 @@ skills.forEach(skill => {
 const contactForm = document.querySelector("form.contact-form");
 const sendingMessage = document.getElementById("sendingMessage");
 const messageSent = document.getElementById("messageSent");
-
 if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
