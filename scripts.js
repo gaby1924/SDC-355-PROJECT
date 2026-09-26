@@ -42,7 +42,6 @@ setTimeout(function () {
     const area = document.getElementById("welcome-message");
     area.appendChild(notification);
 }, 2000); //2 SEC DELAY
-} //END IF INDEX.HTML
     
 //COUNT THE NUMBER OF PROJECTS & DYNAMICALLY SHOW/HIDESECTIONS BASED ON COUNT
 window.onload = function () {
