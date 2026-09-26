@@ -67,6 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
  *******************************/
 document.addEventListener("DOMContentLoaded", function () {
     if (window.location.href.includes("contact.html")) {
+        //TOOLTIP
+        const submitBtn = document.getElementById("submitBtn");
+        const submitTooltip = document.getElementById("submitTooltip");
+        submitBtn.addEventListener("mouseenter", function () {
+            submitTooltip.style.opacity = "1";
+        });
+        submitBtn.addEventListener("mouseleave", function () {
+            submitTooltip.style.opacity = "0";
+        });
+        //CONTACT FORM NOTIFICATIONS
         const contactForm = document.getElementById("contactForm");
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault(); //PREVENT DEFAULT FORM SUBMISSION
@@ -98,13 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 /***********************************
  WELCOME MESSAGE HANDLER(INDEX ONLY)
  **********************************/
 document.addEventListener("DOMContentLoaded", function () {
     if (window.location.href.includes("index.html")) {
-
         const userName = prompt("Hi there! What's your name?");
         const welcomeMessage = userName && userName.trim() !== ""
             ? `Welcome to my website, ${userName}!`
@@ -124,4 +132,17 @@ document.addEventListener("DOMContentLoaded", function () {
             area.appendChild(notification);
         }, 2000);
     }
+});
+/********************
+ PAGE MODAL HANDLER
+*********************/
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("pageModal");
+    const closeBtn = document.getElementById("closeModal");
+    //SHOW MODAL ON PAGE LOAD
+    modal.style.display = "flex";
+    //CLOSE MODAL ON BUTTON CLICK
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
 });

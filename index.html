@@ -1,5 +1,5 @@
-<!--Gabriela Kaul-->
-<!--09/08/26-->
+<!--Name: Gabriela Kaul-->
+<!--Date: 09/08/26-->
 <!--LAST UPDATED: 9/13/26-->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,7 @@
     <title>Gabriela Kaul</title>
 </head>
 <body>
+    <div id="welcome-message"></div>
     <header>
         <!----- NAVIGATION MENU ----->
         <nav> 
@@ -51,16 +52,21 @@
         <!-- A FOR LOOP TO DISPLAY BULLET LIST OF 5 SKILLS OF MINE -->
         <section class="skills">
             <h3>My Skills</h3>
-            <ul>
-                <!-- LINK TO SKILLS LIST SCRIPT-->
-                 <li id="skillsList"></li>
-            </ul>
+            <!--LINK TO SKILLS LIST SCRIPT -->
+            <ul id="skillsList"></ul>
         </section>
     </main>
     <!---- FOOTER ----->
     <footer>
         &copy; 2026 Gabriela Kaul
     </footer>
+    <div id="pageModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>This page is a work in progress</h2>
+            <p>Stay tuned for updates!</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
     <!-- JAVASCRIPT FILE LINK -->
     <script src="scripts.js"></script>
 </body>

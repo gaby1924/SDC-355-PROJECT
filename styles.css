@@ -5,6 +5,12 @@ Date: 09/08/2026
 LAST UPDATED: 09/13/26
 ----------------------*/
 /*-------------------
+GLOBAL TRANSITIONS
+--------------------*/
+html, body, h1, h2, h3, p, nav ul li a, footer, section {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+/*-------------------
 GLOBAL FONT & RESET 
 --------------------*/
 body {
@@ -235,25 +241,6 @@ STYLES/EFFECTS FOR CONTACT FORM
     color: white;
 }
 /*------------------------
-STYLES/EFFECTS FOR DARK 
-MODE TOGGLE BUTTON
--------------------------*/
-#darkModeToggleContainer input[type="checkbox"] {
-    background-color: black;
-    color: purple;
-    cursor: pointer;
-    border: none;
-    padding: 12px;
-    border-radius: 20px;
-    font-size: 18px;
-    font-family: Cascadia Code, monospace;
-    transition: background-color 0.3s ease;
-}
-#darkModeToggleContainer input[type="checkbox"]:hover {
-    background-color: purple;
-    color: white;
-}
-/*------------------------
 RESPONSIVE DESIGN
 STYLES/EFFECTS FOR PHONES
 -------------------------*/
@@ -296,7 +283,89 @@ STYLES/EFFECTS FOR DESKTOPS
         gap: 30px;
     }
 }
+/*------------------------
+STYLES/EFFECTS FOR PAGE MODAL
+-------------------------*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+#closeModal {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*--------
+JS TOOLTIP
+---------*/
+.tooltip {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    background: purple;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.form-row:hover .tooltip {
+    opacity: 1;
+}
 /*----------------------
 DARK MODE THEME &
 DARK MODE TOGGLE BUTTON
 -----------------------*/
+[data-theme="dark"] body {
+    background-color: black;
+    color: white;
+}
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] p { 
+    background-color: black;
+    color: white;
+}
+[data-theme="dark"] nav ul li a {
+    background-color: #222;
+    color: purple;
+}
+[data-theme="dark"] nav ul li a:hover {
+    background-color: black;
+    color: purple;
+}
+[data-theme="dark"] footer {
+    background-color: black;
+    color: white;
+}
+[data-theme="dark"] .home,
+[data-theme="dark"] .about-me,
+[data-theme="dark"] .featuredContent,
+[data-theme="dark"] .project {
+    border: 2px solid purple;
+    border-radius: 20px;
+}
