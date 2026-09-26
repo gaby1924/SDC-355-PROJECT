@@ -12,21 +12,8 @@ This website features my favorite colors, black and purple, and was designed usi
 * CSS
 * JAVASCRIPT
 
-# HOMEPAGE SCREENSHOT
-<img width="1858" height="904" alt="image" src="https://github.com/user-attachments/assets/f108b63b-1ec7-477f-b5bb-4dd91ed86cb4" />
+Final screenshots of each page will be available soon! Until I've finalized the website and developed a domain name, please view my projects below:
 
-# ABOUT ME PAGE SCREENSHOT
-<img width="1892" height="931" alt="image" src="https://github.com/user-attachments/assets/d5fa1d6e-1d78-40fd-8513-71efe1594e06" />
-
-# MY PROJECTS PAGE SCREENSHOT
-<img width="1883" height="915" alt="image" src="https://github.com/user-attachments/assets/515c187c-eb41-43b1-8d96-b723fb9f0320" />
-
-<img width="1891" height="840" alt="image" src="https://github.com/user-attachments/assets/f535319b-066b-4625-bcc7-8d2de75bffe6" />
-
-# CONTACT ME PAGE SCREENSHOT
-<img width="1593" height="877" alt="image" src="https://github.com/user-attachments/assets/d4b6d68a-410d-4ffe-9d21-65613cb1e654" />
-
-Until I've finalized the website and developed a domain name, please view my projects below:
 # THINK WORKWELL INTERNSHIP
 <img width="968" height="945" alt="image" src="https://github.com/user-attachments/assets/1073de2c-a753-4f99-8807-49350debdef2" />
 <img width="1262" height="937" alt="image" src="https://github.com/user-attachments/assets/97adbc8a-95df-4b19-8edb-57143960a5e9" />
