@@ -23,8 +23,7 @@ toggleButton.addEventListener('click', () => {
 });
 
 //WELCOME MESSAGE NOTIFICATION SCRIPT
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.href.includes("index.html")) {
+if (window.location.href.includes("index.html")) {
 const userName = prompt("Hi there! What's your name?");
 //BUILD WELCOME MSG
 const welcomeMessage = userName && userName.trim() !== ""
@@ -44,8 +43,7 @@ setTimeout(function () {
     const area = document.getElementById("welcome-message");
     area.appendChild(notification);
 }, 2000); //2 SEC DELAY
-    } //END IF INDEX.HTML
-});
+} //END IF INDEX.HTML
     
 //COUNT THE NUMBER OF PROJECTS & DYNAMICALLY SHOW/HIDESECTIONS BASED ON COUNT
 window.onload = function () {
