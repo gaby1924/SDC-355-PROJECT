@@ -369,3 +369,61 @@ DARK MODE TOGGLE BUTTON
     border: 2px solid purple;
     border-radius: 20px;
 }
+/*-------------------------
+DYNAMIC PROJECT CARD STYLES
+--------------------------*/
+.dynamic-project-card {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: Cascadia Code, monospace;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.dynamic-project-card img {
+    max-width: 60%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.dynamic-project-card h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.dynamic-project-card p {
+    font-size: 20px;
+    padding: 10px;
+}
+.dynamic-project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: black;
+    color: purple;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.dynamic-project-card a:hover {
+    background-color: purple;
+    color: white;
+}
+/*-------------------
+DARK MODE SUPPORT FOR
+DYNAMIC PROJECT CARDS
+--------------------*/
+[data-theme="dark"] .dynamic-project-card {
+    background-color: black;
+    color: white;
+    border-color: purple;
+}
+[data-theme="dark"] .dynamic-project-card a {
+    background-color: #222;
+    color: purple;
+}
+[data-theme="dark"] .dynamic-project-card a:hover {
+    background-color: purple;
+    color: white;
+}

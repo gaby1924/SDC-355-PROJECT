@@ -4,6 +4,7 @@
 Welcome to my website. This was designed as a class project for an Intro to Web Design course at ECPI. This website contains the following pages:
 * homepage
 * about me page
+* featured content page
 * my projects page
 * contact me page
 

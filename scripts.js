@@ -1,3 +1,39 @@
+/*************************
+ CUSTOM PROJECT OBJECTS
+*************************/
+const projectData = [
+    {
+        title: "Internship",
+        summary: "Worked as an intern at Think WorkWell and redesigned the front-end of the company website focusing on the user experience and user interface.",
+        images: ["assets/ThinkWorkWell.png", "assets/ThinkWorkWell2.png"],
+        repo: "https://github.com/gaby1924/SDC-355-PROJECT.git"
+    },
+    {
+        title: "MOODY",
+        summary: "A mood tracking application that helps patients monitor and analyze their emotional well-being over time.",
+        images: ["assets/moody1.png", "assets/moody2.png", "assets/moody3.png"],
+        repo: "https://github.com/gaby1924/MOODY.git"
+    },
+    {
+        title: "Goodreads Redesign",
+        summary: "A project focused on redesigning the Goodreads platform to improve user experience and interface.",
+        images: ["assets/goodreads1.png", "assets/goodreads2.png"],
+        repo: "https://github.com/gaby1924/SDC-355-PROJECT.git"
+    }
+];
+
+/**************************
+ STORE & PARSE PROJECT DATA
+***************************/
+function loadProjects() {
+    let storedProjects = sessionStorage.getItem("projects");
+    if (!storedProjects) {
+        sessionStorage.setItem("projects", JSON.stringify(projectData));
+        storedProjects = JSON.stringify(projectData);
+    }
+    return JSON.parse(storedProjects);
+}
+
 /*******************
  DARK MODE THEME &
  TOGGLE LOGIC
@@ -23,26 +59,6 @@ toggleButton.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-});
-    
-/**********************
- PROJECT COUNT LOGIC
- **********************/
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.href.includes("projects.html")) {
-        const projectCount = document.querySelectorAll(".projects a").length;
-        const uniDiv = document.querySelector(".UniversityResources");
-        const personalProjectsDiv = document.querySelector(".PersonalProjects");
-        //BEGIN IF-ELSE LOGIC
-        if (personalProjectsDiv) {
-            personalProjectsDiv.style.display = "block";
-        }
-        if (projectCount < 3) {
-            if (uniDiv) uniDiv.style.display = "block";
-        } else {
-            if (uniDiv) uniDiv.style.display = "none";
-        }
-    }
 });
 
 /*************************************
@@ -133,16 +149,42 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000);
     }
 });
+
 /********************
  PAGE MODAL HANDLER
 *********************/
 document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("pageModal");
-    const closeBtn = document.getElementById("closeModal");
-    //SHOW MODAL ON PAGE LOAD
-    modal.style.display = "flex";
-    //CLOSE MODAL ON BUTTON CLICK
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+    if (window.location.href.includes("index.html")) {
+        const modal = document.getElementById("pageModal");
+        const closeBtn = document.getElementById("closeModal");
+        //SHOW MODAL ON PAGE LOAD
+        modal.style.display = "flex";
+        //CLOSE MODAL ON BUTTON CLICK
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    }
+});
+
+/**************************
+ RENDER PROJECT DYNAMICALLY
+ **************************/
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.href.includes("projects.html")) {
+        const projectSection = document.getElementById("dynamic-projects");
+        const projects = loadProjects();
+
+        projects.forEach(project => {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("dynamic-project-card");
+
+            wrapper.innerHTML = `
+                <img src="${project.images[0]}" alt="${project.title}">
+                <h3>${project.title}</h3>
+                <p>${project.summary}</p>
+                <a href="${project.repo}" target="_blank">View Repository</a>
+            `;
+            projectSection.appendChild(wrapper);
+        });
+    }
 });
